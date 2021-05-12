@@ -17,21 +17,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      
-        // For remotes (please adjust)
-        // name: "shell",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './projects/shell/src/app/app.component.ts',
-        // },        
-        
-        // For hosts (please adjust)
-        // remotes: {
-        //     "foo-feature": "foo-feature@http://localhost:4200/remoteEntry.js",
-        //     "bar-feature": "bar-feature@http://localhost:4200/remoteEntry.js",
-
-        // },
-
+        remotes: {
+            "foo_feature": "foo-feature@http://localhost:4201/remoteEntry.js",
+            "bar_feature": "bar-feature@http://localhost:4202/remoteEntry.js",
+        },
         shared: {
           "@angular/core": { singleton: true, strictVersion: true }, 
           "@angular/common": { singleton: true, strictVersion: true }, 
@@ -39,7 +28,6 @@ module.exports = {
 
           ...sharedMappings.getDescriptors()
         }
-        
     }),
     sharedMappings.getPlugin(),
   ],
