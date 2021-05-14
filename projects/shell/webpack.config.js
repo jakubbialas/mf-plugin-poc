@@ -18,8 +18,8 @@ module.exports = {
     plugins: [
         new ModuleFederationPlugin({
             remotes: {
-                'foo_feature': 'foo-feature@http://localhost:4201/remoteEntry.js',
-                'bar_feature': 'bar-feature@http://localhost:4202/remoteEntry.js',
+                // 'foo_feature': 'foo-feature@http://localhost:4201/remoteEntry.js',
+                // 'bar_feature': 'bar-feature@http://localhost:4202/remoteEntry.js',
             },
             shared: {
                 '@angular/core': { singleton: true, strictVersion: true },
