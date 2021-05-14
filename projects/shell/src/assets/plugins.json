@@ -1,0 +1,14 @@
+[
+  {
+    "remoteEntry": "http://localhost:4201/remoteEntry.js",
+    "remoteName": "foo_feature",
+    "exposedModule": "./Module",
+    "moduleName": "FooModule"
+  },
+  {
+    "remoteEntry": "http://localhost:4202/remoteEntry.js",
+    "remoteName": "bar_feature",
+    "exposedModule": "./Module",
+    "moduleName": "BarModule"
+  }
+]

@@ -1,0 +1,8 @@
+<div>
+    <h2>Menu</h2>
+    <ul>
+        <li *ngFor="let item of items$ | async">
+            <a [routerLink]="item.route">{{ item.name }}</a>
+        </li>
+    </ul>
+</div>

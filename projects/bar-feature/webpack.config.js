@@ -5,7 +5,7 @@ const path = require('path');
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
     path.join(__dirname, '../../tsconfig.json'),
-    [/* mapped paths to share */]);
+    ['menu-lib']);
 
 module.exports = {
     output: {
@@ -20,7 +20,7 @@ module.exports = {
             name: 'bar_feature',
             filename: 'remoteEntry.js',
             exposes: {
-                './Module': './projects/bar-feature/src/app/app.module.ts',
+                './Module': './projects/bar-feature/src/app/bar/bar.module.ts',
             },
             shared: {
                 '@angular/core': { singleton: true, strictVersion: true },
